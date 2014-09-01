@@ -1,0 +1,78 @@
+@import 'nib'
+@import 'jeet'
+
+pageWidth = 1200px
+headerFontColor = #c3f3e7
+
+::selection 
+  color: #c8dd95
+  background: #596876
+
+html, body
+  min-height 100%
+
+body
+  background linear-gradient(top, #6ccfbb, #4a7c72)
+  font-family 'source sans pro', sans-serif
+
+h1, p
+  cursor default
+
+header
+  center(pageWidth)
+  margin-bottom 6em
+  padding 0 1em
+  h1
+    font-size 140px
+    font-weight 600
+    color headerFontColor
+    margin .26em 0
+
+  p
+    strong
+      font-weight 300
+    color headerFontColor
+    font-size 72px
+    font-weight 200
+    margin .1em 0
+
+section
+  div
+    center(pageWidth)
+    stack()
+    padding 0 1em
+    p
+      col(5/7)
+      color #d8e9e6
+      font-size 60px
+      font-weight 700
+      line-height 100px
+      min-height 220px
+      padding 36px 0
+    p.center
+      col(1)
+      text-align center
+      margin 0
+    a
+      color #e3efbd
+      text-decoration none
+  margin-bottom 3em
+  padding-top 36px
+
+.taiwan-wrapper
+  col(2/7)
+  text-align center
+  img
+    max-width 210px
+    height auto
+
+.coffee-wrapper
+  col(2/7)
+  text-align center
+  img
+    max-width 320px
+    height auto
+
+.section-float
+  background rgba(255, 255, 255, 0.05)
+  box-shadow(0, 0, 20px, rgba(0, 0, 0, 0.12))
