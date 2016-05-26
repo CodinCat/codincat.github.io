@@ -1,78 +1,50 @@
-@import 'nib'
-@import 'jeet'
+link-color=#FDFFC6
 
-pageWidth = 1200px
-headerFontColor = #c3f3e7
+*
+ box-sizing border-box 
 
 ::selection 
-  color: #c8dd95
-  background: #596876
+  color #FFFEA1
+  background #DDFDFF
 
 html, body
-  min-height 100%
-
-body
-  background linear-gradient(top left, #6ad3be, #4ca794, #398fb5, #479dc3)
-  font-family 'source sans pro', sans-serif
-
-h1, p
+  padding 0; margin 0
+  min-height 100vh
   cursor default
 
+body
+  background linear-gradient(135deg, #1A86D2 0%, #38CDF7 100%)
+  color #fff
+  text-shadow 0 1px 1px #363636
+  font-family 'Fira Mono', monospace
+  line-height 1.6
+  display flex
+  justify-content center
+
+a
+  color link-color
+  border-bottom 1px solid link-color
+  text-decoration none
+
+.container
+  background linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.18) 35%, rgba(255,255,255,0.12) 52%, rgba(255,255,255,0.18) 73%, rgba(255,255,255,0.14) 100%)
+  align-self center
+  margin-bottom 20vh
+  width 460px
+  border 2px solid rgba(255, 255, 255, .4)
+  box-shadow 0 0 120px 8px rgba(255,255,255,0.22), 0 0 40px rgba(255,255,255,0.16), 0 0 200px 10px rgba(255,255,255,0.16)
+  padding 20px 26px
+  @media screen and (max-width 480px)
+    width 90vw
+    word-break break-all
+
 header
-  center(pageWidth)
-  margin-bottom 6em
-  padding 0 1em
-  h1
-    font-size 140px
-    font-weight 600
-    color headerFontColor
-    margin .26em 0
+  margin-bottom 16px
 
-  p
-    strong
-      font-weight 300
-    color headerFontColor
-    font-size 72px
-    font-weight 200
-    margin .1em 0
+h1
+  font-size 28px
+  margin 0
 
-section
-  div
-    center(pageWidth)
-    stack()
-    padding 0 1em
-    p
-      col(5/7)
-      color #d8e9e6
-      font-size 60px
-      font-weight 700
-      line-height 100px
-      min-height 220px
-      padding 36px 0
-    p.center
-      col(1)
-      text-align center
-      margin 0
-    a
-      color #e3efbd
-      text-decoration none
-  margin-bottom 3em
-  padding-top 36px
-
-.taiwan-wrapper
-  col(2/7)
-  text-align center
-  img
-    max-width 210px
-    height auto
-
-.coffee-wrapper
-  col(2/7)
-  text-align center
-  img
-    max-width 320px
-    height auto
-
-.section-float
-  background rgba(255, 255, 255, 0.05)
-  box-shadow(0, 0, 20px, rgba(0, 0, 0, 0.12))
+p
+  font-size 16px
+  margin-bottom 10px
