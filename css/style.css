@@ -37,10 +37,11 @@ a {
   border: 2px solid rgba(255,255,255,0.4);
   box-shadow: 0 0 120px 8px rgba(255,255,255,0.22), 0 0 40px rgba(255,255,255,0.16), 0 0 200px 10px rgba(255,255,255,0.16);
   padding: 20px 26px;
-  transition: border-color ease-out 1.2s;
+  transition: border-color ease-out 1.2s, box-shadow ease-out 1.2s;
 }
 .container:hover {
   border-color: rgba(255,255,255,0.66);
+  box-shadow: 0 0 120px 12px rgba(255,255,255,0.32), 0 0 40px rgba(255,255,255,0.26), 0 0 200px 14px rgba(255,255,255,0.26);
 }
 @media screen and (max-width: 480px) {
   .container {
@@ -55,8 +56,17 @@ h1 {
   font-size: 28px;
   margin: 0 0 12px;
 }
+h1 .small {
+  font-size: 60%;
+  opacity: 0.76;
+}
 .sub-heading {
   font-size: 18px;
+}
+section {
+  border-top: 1px solid rgba(255,255,255,0.36);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.12) inset;
+  padding: 12px 0;
 }
 p {
   font-size: 16px;

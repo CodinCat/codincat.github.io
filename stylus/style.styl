@@ -1,5 +1,11 @@
 link-color=#FDFFC6
 
+t-w(val)
+  rgba(255, 255, 255, val)
+
+t-b(val)
+  rgba(0, 0, 0, val)
+
 *
  box-sizing border-box 
 
@@ -45,16 +51,17 @@ a
 
 .container
   animation-in()
-  background linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.18) 35%, rgba(255,255,255,0.12) 52%, rgba(255,255,255,0.18) 73%, rgba(255,255,255,0.14) 100%)
+  background linear-gradient(135deg, t-w(.12) 0%, t-w(.18) 35%, t-w(.12) 52%, t-w(.18) 73%, t-w(.14) 100%)
   align-self center
   margin-bottom 20vh
   width 480px
-  border 2px solid rgba(255, 255, 255, .4)
-  box-shadow 0 0 120px 8px rgba(255,255,255,0.22), 0 0 40px rgba(255,255,255,0.16), 0 0 200px 10px rgba(255,255,255,0.16)
+  border 2px solid t-w(.4)
+  box-shadow 0 0 120px 8px t-w(.22), 0 0 40px t-w(.16), 0 0 200px 10px t-w(.16)
   padding 20px 26px
-  transition border-color ease-out 1.2s
+  transition border-color ease-out 1.2s, box-shadow ease-out 1.2s
   &:hover
-    border-color rgba(255, 255, 255, .66)
+    border-color t-w(.66)
+    box-shadow 0 0 120px 12px t-w(.32), 0 0 40px t-w(.26), 0 0 200px 14px t-w(.26)
   @media screen and (max-width 480px)
     width 90vw
     word-break break-all
@@ -65,9 +72,17 @@ header
 h1
   font-size 28px
   margin 0 0 12px
+  .small
+    font-size 60%
+    opacity .76
 
 .sub-heading
   font-size 18px
+
+section
+  border-top 1px solid t-w(.36)
+  box-shadow 0 1px 0 t-b(.12) inset 
+  padding 12px 0
 
 p
   font-size 16px
